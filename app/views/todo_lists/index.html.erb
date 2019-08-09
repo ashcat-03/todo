@@ -1,6 +1,13 @@
 <%= search_form_for @q do |f| %>
-<%= f.label :title_cont, "search word: " %>
+<%= f.label :title_cont, "search word " %>
+</br>
 <%= f.search_field :title_cont %>
+</br>
+<%= f.label :created_at, "filter by created date" %>
+</br>
+<%= f.date_field :created_at_gteq, include_blank: true %> 〜
+<%= f.date_field :created_at_lteq, include_blank: true %>
+</br>
 <%= f.submit %>
 <% end %>
 
